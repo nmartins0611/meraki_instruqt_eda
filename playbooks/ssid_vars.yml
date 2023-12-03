@@ -1,0 +1,65 @@
+---
+meraki_api_key: "{{ meraki_key }}"
+org_id: "{{ org_id }}"
+
+SSID:
+  - name: 
+    number: 1
+    enabled: true
+    authentication:
+      auth_mode: psk
+      encryption_mode: wpa
+      psk: 
+      wpa_encryption_mode: WPA2 only
+    vlan:
+      use_vlan_tagging: true
+      defaultVlanId: 100
+    visible: false
+    availableOnAllAps: true
+    
+  - name: 
+    number: 2
+    enabled: true
+    authentication:
+      auth_mode: psk
+      encryption_mode: wpa
+      psk: 
+      wpa_encryption_mode: WPA2 only
+    state: present
+    visible: true
+    availableOnAllAps: true
+    vlan:
+      useVlanTagging: true
+      defaultVlanId: 200
+    visible: true
+    availableOnAllAps: true
+    
+  - name: 
+    number: 3
+    enabled: false
+    authentication:
+      auth_mode: psk
+      encryption_mode: wpa
+      psk: 
+      wpa_encryption_mode: WPA2 only
+    vlan:
+      useVlanTagging: true
+      defaultVlanId: 300
+    state: present
+    visible: false
+    availableOnAllAps: true
+    
+  - name: 
+    number: 4
+    enabled: true
+    authentication:
+      auth_mode: psk
+      encryption_mode: wpa
+      psk: 
+      wpa_encryption_mode: WPA2 only
+    vlan:
+      useVlanTagging: true
+      defaultVlanId: 400
+    state: present
+    visible: false
+    availableOnAllAps: true
